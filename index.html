@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <title>Alarme</title>
+</head>
+<body>
+
+    <main>
+        <h3>Alarme</h3>
+        <div class="row">
+            <div class="col">
+                <h3>01:00</h3>
+                <p>Uma vez</p>
+            </div>
+            <div class="button">
+                <input type="checkbox" id="slider">
+
+                <label for="slider" class="switch">
+                    <span class="slider"></span>
+                </label>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col">
+                <h3>01:00</h3>
+                <p>Uma vez</p>
+            </div>
+            <div class="button">
+                <input type="checkbox" id="slider">
+
+                <label for="slider" class="switch">
+                    <span class="slider"></span>
+                </label>
+            </div>
+        </div>
+        
+        <button id="add">
+            +
+        </button>
+
+        <footer>
+            <button><i class="fa-regular fa-clock"></i></button>
+            <button><i class="fa-solid fa-clock-rotate-left"></i></button>
+            <button><i class="fa-solid fa-stopwatch"></i></button>
+            <button><i class="fa-solid fa-hourglass-end"></i></button>
+        </footer>
+
+        <style>
+
+            body{
+                color: #7777; /* Cor do elemento */
+                height: 100vh; /**/
+                display: flex; /* Alinhamento dos elementos */
+                justify-content: center; /* Alinha os elementos no centro */
+                background-color: #1c1c1c; /* Cor do fundo */
+                overflow: hidden; /* Empurra os elementos */
+            }
+            main{
+                width: 200px; /* Alinhamento em coluna */
+                height: 100vh; /**/
+                display: flex; /* Alinhamento dos elementos */
+                align-items: center; /* Coloca os itens no centro */
+                flex-direction: column; /* Alinhas os itens em coluna */
+                justify-content: center; /* Alinha os lementos no centro */
+            }
+            h3{
+                font-size: 40px; /* Tamanho da fonte */
+                color: white; /* Cor do elemento(Fonte) */
+            }
+            .row{ /* . = Classe */
+                display: flex; /* Alinha os elementos */
+                margin: 10px; /* Espaçamentos de elementos */
+                justify-content: space-between; /**/
+                align-items: center; /* Coloca os itens no centro */
+                padding: 10px; /* Espaçamentos de elementos */
+                border-radius: 20px; /* Arredonda as bordas */
+                width: 80%; /* Largura */
+                color: white; /* Cor da classe */
+                background-color: #7777; /* Cor do fundo do elemento */
+                opacity: .5; /* Transparencia do elemento */
+                transition: .9s; /*  */
+            }
+            .row:hover{
+                opacity: .1; /* Transparencia do elemento */
+                cursor: pointer; /* Mãozinha do mouse */
+            }
+            #slider{
+                display: none; /*  */
+            }
+            .switch{
+                position: relative; /*  */
+                background-color: #777; /*  */
+                width: 120px; /* Largura */
+                height: 60px; /* Altura */
+                border-radius: 40px; /* Arredonda as bordas */
+                display: flex; /* Alinhamento do elementos */
+                align-items: center; /**/
+                padding: 5px; /* Tamanho do item */
+                transition: .9; /*  */
+                cursor: pointer; /* Mãozinha do mouse */
+            }
+            .slider{
+                position: absolute; /* Posição do elemento */
+                background-color: white; /*  */
+                width: 50px; /* Largura */
+                height: 50px; /* Altura */
+                border-radius: 50px; /* Arredondamento das bordas */
+                transition: .9s; /*  */
+            }
+            /* Efeitos */
+            #slider:checked ~ .switch{
+                background-color: blue; /* Cor de fundo do elemento */
+            }
+            #slider:checked ~ .switch .slider{
+                transform: translateX(60px); /*  */
+            }
+            #add{
+                font-size: 50px; /* Tamanho da fonte do elemento */
+                width: 70px; /* Largura */
+                height: 70px; /* Altura */
+                border-radius: 50%; /* Arredondamento das borda */
+                cursor: pointer; /*  */
+                opacity: .50; /* Transparencia do elemento */
+                color: blue; /* cor do elemento */
+                transition: .9s; /*  */
+                position: absolute; /* Posição do elemento */
+                bottom: 100px; /* Posição do butão */
+                right: 400px; /*  */
+            }
+            #add:hover{
+                color: green; /* Cor do elemento */
+                transform: scale(1.12); /* Efeito de crescer o elemento */
+            }
+            footer{
+                margin: 10px; /* Alinhamento dos elementos */
+            }
+
+        </style>
+        
+    </main>
+</body>
+</html>
