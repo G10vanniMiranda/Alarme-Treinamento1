@@ -17,9 +17,9 @@
                 <p>Uma vez</p>
             </div>
             <div class="button">
-                <input type="checkbox" id="slider">
+                <input type="checkbox" id="slider1">
 
-                <label for="slider" class="switch">
+                <label for="slider1" class="switch">
                     <span class="slider"></span>
                 </label>
             </div>
@@ -31,9 +31,9 @@
                 <p>Uma vez</p>
             </div>
             <div class="button">
-                <input type="checkbox" id="slider">
+                <input type="checkbox" id="slider2">
 
-                <label for="slider" class="switch">
+                <label for="slider2" class="switch">
                     <span class="slider"></span>
                 </label>
             </div>
@@ -60,12 +60,13 @@
             display: flex; /* Alinhamento dos elementos */            
             justify-content: center; /* Alinha os elementos no centro */
             background-color: #1c1c1c; /* Cor do fundo */
+            margin-top: -150px; /* Empurra os elementos para cima */
 
             overflow: hidden; /* Empurra os elementos */
         }
         main{
             width: 200px; /* Largura */
-            height: 100vh; /* Altura */
+            height: 100vh; /* Altura */            
 
             display: flex; /* Alinhamento dos elementos */
             align-items: center; /* Coloca os itens no centro */
@@ -93,7 +94,7 @@
             opacity: .1; /* Transparencia do elemento */
             cursor: pointer; /* Mãozinha do mouse */
         }
-        #slider{
+        input[type="checkbox"] {
             display: none; /* Esconde o elemento */
         }
         .switch{
@@ -117,13 +118,17 @@
             border-radius: 50px; /* Arredondamento das bordas */
             transition: .9s; /* Animação do elemento */
         }
+
         /* Efeitos */
-        #slider:checked ~ .switch{
+
+        input[type="checkbox"]:checked + .switch{
             background-color: blue; /* Cor de fundo do elemento */
         }
-        #slider:checked ~ .switch .slider{
+
+        input[type="checkbox"]:checked + .switch .slider{
             transform: translateX(60px); /* Movimento do elemento */
         }
+
         #add{
             font-size: 50px; /* Tamanho da fonte do elemento */
             width: 70px; /* Largura */
@@ -136,7 +141,7 @@
             transition: .9s; /* Animação do elemento */
 
             position: absolute; /* Posição do elemento */
-            bottom: 100px; /* Posição do butão coluna */
+            bottom: 270px; /* Posição do butão coluna */
             right: 740px; /* Posição do elemento linha */
         }
         #add:hover{ /* hover = Animação */
@@ -158,6 +163,7 @@
         }
         footer button{
             font-size: 50px; /* Tamanho da fonte */
+            margin-top: -180px;
             width: 70px; /* Largura */
             height: 70px; /* Altura */
             border-radius: 50%; /* Arredondamento da borda */
@@ -166,8 +172,7 @@
             opacity: .50; /* Transparencia do elemento */
             color: #c1c1c1; /* Cor do elemento */
             transition: .9s;
-            background-color: #1c1c1c; /* Cor de fundo do elemento */
-            
+            background-color: #7777; /* Cor de fundo do elemento */       
         }
         footer button:hover{
             transform: rotate(360deg); /* rotate = efeito giratorio do elemento */
